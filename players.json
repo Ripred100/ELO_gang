@@ -1,0 +1,24 @@
+{
+    "players": [
+        {
+            "name": "Anuar",
+            "ign": "Cocoliztli",
+            "ELO": 1500
+        },
+        {
+            "name": "Thomas",
+            "ign": "Guylink",
+            "ELO": 1500
+        },
+        {
+            "name": "Daniel",
+            "ign": "Dpap",
+            "ELO": 1500
+        },
+        {
+            "name": "Daniel",
+            "ign": "Dpap",
+            "ELO": 1500
+        }
+    ]
+}
