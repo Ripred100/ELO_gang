@@ -15,6 +15,7 @@ def write_json(new_data, filename='players.json'):
 
 
 def AddPlayer(Name, IGN, filename='players.json'):
+
     Dict = dict([('name', Name), ('ign', IGN), ('ELO', 1500)])
     print(Dict)
 
@@ -22,8 +23,7 @@ def AddPlayer(Name, IGN, filename='players.json'):
         data = json.load(f)
         temp = data['players']
         temp.append(Dict)
-    
-    f.close()
+        f.close()
 
     write_json(data)
 
