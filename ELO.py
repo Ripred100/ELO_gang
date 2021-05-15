@@ -1,12 +1,5 @@
 import json
-
-def expected(eloA, eloB):
-
-
-    Expo = (eloB - eloA)/400 
-    AWin = 1.0/(1.0 + (10.0**Expo))
-
-    return AWin
+import requests
 
 
 def write_json(new_data, filename='players.json'):
@@ -16,7 +9,7 @@ def write_json(new_data, filename='players.json'):
 
 def AddPlayer(Name, IGN, filename='players.json'):
 
-    Dict = dict([('name', Name), ('ign', IGN), ('ELO', 1500)])
+    Dict = dict([('name', Name), ('ign', IGN), ('IQ', 100.0), ('Bungo', 100.0/3.0)])
     print(Dict)
 
     with open(filename) as f:
@@ -26,6 +19,14 @@ def AddPlayer(Name, IGN, filename='players.json'):
         f.close()
 
     write_json(data)
+
+def requestMatchData(GameID, APIKey="RGAPI-cbb98062-5c17-4480-92e7-77b8929052c3"):
+    URL = "https://na1.api.riotgames.com/lol/match/v4/matches/" + GameID + "?api_key=" + APIKey
+    print(URL)
+    response = requests.get(URL)
+    return response
+
+
 
 
 
