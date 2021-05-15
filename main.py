@@ -7,10 +7,7 @@ from trueskill import Rating
 
 def main():
 
-    #ELO.AddPlayer('Ozzy','lololol')
-
-    r1 = Rating(100.0, 100.0/3.0)
-    print(r1)
+    
 
     response = ELO.requestMatchData("3903754259")
 
